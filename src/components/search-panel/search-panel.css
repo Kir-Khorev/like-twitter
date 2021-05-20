@@ -1,0 +1,10 @@
+.search-panel {
+  margin: 3rem;
+}
+
+.search-input {
+  width: auto;
+  margin: auto 10px;
+  padding: 4px 0;
+  width: 40%;
+}

@@ -1,0 +1,43 @@
+.messageItem {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    max-width: 100%;
+    border-radius: 0.25rem;
+}
+
+.author {
+    font-weight: 800;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.date {
+    font-style: italic;
+    font-size: 9px;
+    color: rgb(170, 170, 170);
+}
+
+.avatarImg {
+    border-radius: 50%;
+    max-width: 50px;
+    margin-right: 5px;
+}
+
+.text {
+    font-weight: 600;
+    font-size: 15px;
+    background-color: rgb(187, 247, 187);
+    padding: 5px;
+}
+
+.readed {
+    border: 1px solid greenyellow;
+    background-color:rgba(240, 255, 240, 0.274);
+}
+
+.unreaded {
+    border: 1px solid lightblue;
+    background-color:honeydew;
+}
