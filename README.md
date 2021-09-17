@@ -1,3 +1,17 @@
+# Like-twitter App
+An application that allows you to "tweet". Implemented the functionality of "likes" and receiving messages from server.
+
+> - [Live Demo](https://like-twitter-app.vercel.app/) :chicken:
+
+![Screenshot](./src/imgages/screenshot.png "Screenshot")
+
+### Practiced
+In this project i practiced:
+- React
+- usage API
+- AJAX, Fetch
+- Class and Functional components
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

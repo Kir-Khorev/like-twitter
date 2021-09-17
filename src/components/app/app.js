@@ -10,7 +10,6 @@ export default class App extends Component {
             <Router>
                 <div className='app'>
                     <AppMenu />
-
                     <Route path='/' exact component={HomePage}/>
                     <Route path='/messages' exact component={MessagesPage}/>
                 </div>
