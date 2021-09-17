@@ -3,7 +3,7 @@ An application that allows you to "tweet". Implemented the functionality of "lik
 
 > - [Live Demo](https://like-twitter-app.vercel.app/) :chicken:
 
-![Screenshot](./src/imgages/screenshot.png "Screenshot")
+![Screenshot](./src/images/screenshot.png "Screenshot")
 
 ### Practiced
 In this project i practiced:
@@ -82,3 +82,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Authors
+Kir Khorev
+
+## License
+This project is licensed under Unlicense license.
