@@ -54,7 +54,7 @@ export default class MessageItem extends Component {
         return ( 
         <li className={this.state.readed === true ? 'messageItem readed' : 'messageItem unreaded'}>
             <div className='author-wrapper'>
-                <img src={this.state.message.img} className='avatarImg'/>
+                <img src={this.state.message.img} alt={this.state.message.author} className='avatarImg'/>
                 <span className='author'>{this.state.message.author}</span>
             </div>
             <span className='date'>{new Date(2001, 0, 1).toString()}</span>

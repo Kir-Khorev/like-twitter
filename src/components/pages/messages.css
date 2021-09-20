@@ -6,6 +6,13 @@
     counter-reset: button-counter;
 }
 
+.homePage{
+    width: 800px;
+    margin: auto;
+    flex-grow: 1;
+
+}
+
 .row
 {
     display: table-row;

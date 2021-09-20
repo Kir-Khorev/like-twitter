@@ -19,16 +19,12 @@
     & .btn-trash
         color: red
 
-    & .fa-heart
-        width: 35px
-        height: 35px
-        text-align: center
-        line-height: 35px
-        font-size: 16px
+    & .btn-heart
         color: red
-        transition: 0.3s all
-        transform: translateX(30px)
-        opacity: 0
+
+    & .fa-heart
+        color: gray
+        opacity: 0.3
 
     &-label
         display: block
@@ -38,11 +34,15 @@
         transition: 0.5s all
 
     &.like .fa-heart
-        opacity: 10
-        transform: translateX(0px)
+        opacity: 0.90
+        color: red
+        transition: 0.5s all
 
     &.important .app-list-item-label
         color: #FFD700
 
     &.important .btn-star
+        color: #FFD700
+
+    &.important .btn-heart
         color: #FFD700

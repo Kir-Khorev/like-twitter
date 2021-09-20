@@ -16,7 +16,7 @@
 .date {
     font-style: italic;
     font-size: 9px;
-    color: rgb(170, 170, 170);
+    color: rgb(110, 110, 110);
 }
 
 .avatarImg {
@@ -28,16 +28,18 @@
 .text {
     font-weight: 600;
     font-size: 15px;
-    background-color: rgb(187, 247, 187);
+    border: 1px solid lightcoral;
     padding: 5px;
 }
 
 .readed {
     border: 1px solid greenyellow;
-    background-color:rgba(240, 255, 240, 0.274);
+    background-color:rgb(155, 219, 155);
+
 }
 
 .unreaded {
-    border: 1px solid lightblue;
-    background-color:honeydew;
+    border: 1px solid rgb(158, 157, 157);
+    background-color: rgb(202, 181, 181);
+    opacity: 0.8;
 }

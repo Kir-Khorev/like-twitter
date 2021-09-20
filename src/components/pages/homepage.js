@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import SearchPanel from '../search-panel';
 import AppHeader from '../app-header';
 import PostList from '../post-list';
@@ -9,15 +9,15 @@ import nextId from "react-id-generator";
 
 export default class HomePage extends Component {
 
-    constructor (props) {
+    constructor(props) {
         super(props);
         this.state = {
             data: [
-                {label: 'Going to lear React', important: true, like: false, id: nextId('random-id-')},
-                {label: 'Thats is good', important: false, like: false, id: nextId('random-id-')},
-                {label: 'I need a break...', important: false, like: false, id: nextId('random-id-')}
+                { label: 'Going to lear React', important: true, like: false, id: nextId('random-id-') },
+                { label: 'Thats is good', important: false, like: true, id: nextId('random-id-') },
+                { label: 'I need a break...', important: false, like: false, id: nextId('random-id-') }
             ],
-            term : '',
+            term: '',
             filter: 'all'
         };
         this.deleteItem = this.deleteItem.bind(this);
@@ -32,14 +32,14 @@ export default class HomePage extends Component {
     }
 
     deleteItem(id) {
-        this.setState(({data}) => {
+        this.setState(({ data }) => {
             const index = data.findIndex(elem => elem.id === id);
 
             const before = data.slice(0, index);
             const after = data.slice(index + 1);
-    
+
             const newArr = [...before, ...after];
-    
+
             return {
                 data: newArr
             };
@@ -50,11 +50,11 @@ export default class HomePage extends Component {
     addItem(body) {
         const newItem = {
             label: body,
-            important: true,
+            important: false,
             id: nextId('random-id-')
         };
 
-        this.setState(({data}) => {
+        this.setState(({ data }) => {
             const newArr = [...data, newItem];
             return {
                 data: newArr
@@ -63,15 +63,15 @@ export default class HomePage extends Component {
     }
 
     onToggleImportant(id) {
-        this.setState(({data}) => {
+        this.setState(({ data }) => {
             const index = data.findIndex(elem => elem.id === id);
 
             const old = data[index];
-            const newItem = {...old, important: !old.important};
+            const newItem = { ...old, important: !old.important };
 
             const before = data.slice(0, index);
             const after = data.slice(index + 1);
-    
+
             const newArr = [...before, newItem, ...after];
 
             return {
@@ -80,16 +80,16 @@ export default class HomePage extends Component {
         });
     }
 
-    onToggleLike (id) {
-        this.setState(({data}) => {
+    onToggleLike(id) {
+        this.setState(({ data }) => {
             const index = data.findIndex(elem => elem.id === id);
 
             const old = data[index];
-            const newItem = {...old, like: !old.like};
+            const newItem = { ...old, like: !old.like };
 
             const before = data.slice(0, index);
             const after = data.slice(index + 1);
-    
+
             const newArr = [...before, newItem, ...after];
 
             return {
@@ -98,7 +98,7 @@ export default class HomePage extends Component {
         });
     }
 
-    searchPost (items, term) {
+    searchPost(items, term) {
         if (term.length === 0) {
             return items
         }
@@ -108,7 +108,7 @@ export default class HomePage extends Component {
         });
     }
 
-    filterPost (items, filter) {
+    filterPost(items, filter) {
         if (filter === 'like') {
             return items.filter(item => item.like);
         } else {
@@ -116,39 +116,36 @@ export default class HomePage extends Component {
         }
     }
 
-    onUpdateSearch (term) {
-        this.setState({term});
+    onUpdateSearch(term) {
+        this.setState({ term });
     }
 
     onFilterSelect(filter) {
-        this.setState({filter});
+        this.setState({ filter });
     }
 
-    render () {
-        const {data, term, filter} = this.state;        
+    render() {
+        const { data, term, filter } = this.state;
         const liked = data.filter(item => item.like).length;
         const allPosts = data.length;
         const visiblePosts = this.filterPost(this.searchPost(data, term), filter);
 
         return (
-            <div>
+            <div className='homePage'>
                 <h1>Home Page</h1>
                 <AppHeader liked={liked} allPosts={allPosts} />
-
                 <SearchPanel
                     onUpdateSearch={this.onUpdateSearch} />
                 <PostStatusFilter
                     filter={filter}
                     onFilterSelect={this.onFilterSelect} />
-                <PostList 
+                <PostAddForm onAdd={this.addItem} />
+                <PostList
                     posts={visiblePosts}
-                    onDelete={this.deleteItem}   
+                    onDelete={this.deleteItem}
                     onToggleImportant={this.onToggleImportant}
                     onToggleLike={this.onToggleLike}
                 />
-                <PostAddForm
-                    onAdd={this.addItem}
-                />    
             </div>
         )
     }
