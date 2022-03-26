@@ -65,13 +65,10 @@ export default class HomePage extends Component {
     onToggleImportant(id) {
         this.setState(({ data }) => {
             const index = data.findIndex(elem => elem.id === id);
-
             const old = data[index];
             const newItem = { ...old, important: !old.important };
-
             const before = data.slice(0, index);
             const after = data.slice(index + 1);
-
             const newArr = [...before, newItem, ...after];
 
             return {

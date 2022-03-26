@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-
 import './app-header.css';
 import styled from 'styled-components';
 
@@ -25,7 +24,7 @@ const AppHeader = ({liked, allPosts}) => {
     return (
         <Header colored as='a'>
             <h1>John Weekend</h1>
-            <h2>{allPosts} записей, из них понравилось {liked}</h2>
+            <h2>{allPosts} twitts, liked: {liked}</h2>
         </Header>
     )
 };

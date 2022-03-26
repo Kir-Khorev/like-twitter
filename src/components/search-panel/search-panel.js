@@ -21,10 +21,9 @@ export default class SearchPanel extends Component {
             <input
                 className='from-control search-input' 
                 type='text'
-                placeholder='Поиск по записям'
+                placeholder='Search...'
                 onChange={this.onUpdateSearch}
             />
         )
-    
     }
 }

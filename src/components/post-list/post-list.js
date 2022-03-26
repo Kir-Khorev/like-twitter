@@ -1,8 +1,7 @@
 import React from 'react';
 import PostListItem from '../post-list-item';
-import './post-list.css';
-
 import { ListGroup, ListGroupItem } from 'reactstrap';
+import './post-list.css';
 
 const PostList = ({posts, onDelete, onToggleImportant, onToggleLike}) => {
 
