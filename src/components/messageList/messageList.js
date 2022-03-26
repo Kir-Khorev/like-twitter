@@ -10,7 +10,7 @@ const messageListStyle = {
 const MessageList = () => {
     return (
         <div style={messageListStyle}>
-            <h1>Messages Page</h1>
+            <h1 className='message-title'>Messages Page</h1>
             <ul> {new Array(5).fill('').map((_, index) => <MessageItem key={index} />)}  </ul>
         </div>
     )
