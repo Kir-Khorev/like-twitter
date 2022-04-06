@@ -58,7 +58,7 @@ export default class MessageItem extends Component {
                 <span className='date'>{new Date(2001, 0, 1).toString()}</span>
                 <span className='text'>{this.state.message.text}</span>
                 <button className='btn' onClick={this.onToggleReaded}>
-                    {this.state.readed === true ? 'Прочитать' : 'Отметить как непрочитанное'}
+                    {this.state.readed === true ? 'Read' : 'Mark as read'}
                 </button>
             </li>
         )

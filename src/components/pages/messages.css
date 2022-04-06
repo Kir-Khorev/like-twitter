@@ -1,5 +1,4 @@
-#app-cover
-{
+#app-cover{
     display: table;
     width: 600px;
     margin: 80px auto;
@@ -7,19 +6,40 @@
 }
 
 .homePage{
-    width: 800px;
+    max-width: 800px;
     margin: auto;
     flex-grow: 1;
-
+    background: aliceblue;
 }
 
-.row
-{
+.homePage h1 {
+    font-size: 3vh;
+    text-align: center;
+}
+
+.headerName {
+    display: block !important;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.homePage-searchPanel {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
     display: table-row;
 }
 
-.toggle-button-cover
-{
+.toggle-button-cover{
     display: table-cell;
     position: relative;
     width: 200px;
@@ -27,8 +47,7 @@
     box-sizing: border-box;
 }
 
-.button-cover
-{
+.button-cover{
     height: 100px;
     margin: 20px;
     background-color: #fff;
@@ -36,8 +55,7 @@
     border-radius: 4px;
 }
 
-.button-cover:before
-{
+.button-cover:before{
     counter-increment: button-counter;
     content: counter(button-counter);
     position: absolute;
@@ -49,8 +67,7 @@
     padding: 5px;
 }
 
-.button-cover, .knobs, .layer
-{
+.button-cover, .knobs, .layer{
     position: absolute;
     top: 0;
     right: 0;
@@ -58,8 +75,7 @@
     left: 0;
 }
 
-.button
-{
+.button{
     position: relative;
     top: 50%;
     width: 74px;
@@ -68,18 +84,15 @@
     overflow: hidden;
 }
 
-.button.r, .button.r .layer
-{
+.button.r, .button.r .layer{
     border-radius: 100px;
 }
 
-.button.b2
-{
+.button.b2{
     border-radius: 2px;
 }
 
-.checkbox
-{
+.checkbox{
     position: relative;
     width: 100%;
     height: 100%;
@@ -90,13 +103,11 @@
     z-index: 3;
 }
 
-.knobs
-{
+.knobs{
     z-index: 2;
 }
 
-.layer
-{
+.layer{
     width: 100%;
     background-color: #ebf7fc;
     transition: 0.3s ease all;
@@ -104,8 +115,7 @@
 }
 
 /* Button 1 */
-#button-1 .knobs:before
-{
+#button-1 .knobs:before{
     content: 'NEW';
     position: absolute;
     top: 4px;
@@ -123,19 +133,34 @@
     transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
 }
 
-#button-1 .checkbox:checked + .knobs:before
-{
+#button-1 .checkbox:checked + .knobs:before{
     content: 'ALL';
     left: 42px;
     background-color: #f44336;
 }
 
-#button-1 .checkbox:checked ~ .layer
-{
+#button-1 .checkbox:checked ~ .layer{
     background-color: #fcebeb;
 }
 
-#button-1 .knobs, #button-1 .knobs:before, #button-1 .layer
-{
+#button-1 .knobs, #button-1 .knobs:before, #button-1 .layer{
     transition: 0.3s ease all;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .homePage {
+        width: 1000px;
+    }
+
+    .headerName {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .homePage-searchPanel {
+        display: flex;
+        flex-direction: row;
+    }
 }

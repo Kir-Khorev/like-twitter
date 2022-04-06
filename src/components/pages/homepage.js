@@ -131,11 +131,14 @@ export default class HomePage extends Component {
             <div className='homePage'>
                 <h1>Home Page</h1>
                 <AppHeader liked={liked} allPosts={allPosts} />
-                <SearchPanel
-                    onUpdateSearch={this.onUpdateSearch} />
-                <PostStatusFilter
-                    filter={filter}
-                    onFilterSelect={this.onFilterSelect} />
+                <div className="homePage-searchPanel">
+                    <SearchPanel
+                        onUpdateSearch={this.onUpdateSearch} />
+                    <PostStatusFilter
+                        filter={filter}
+                        onFilterSelect={this.onFilterSelect} />
+                </div>
+
                 <PostAddForm onAdd={this.addItem} />
                 <PostList
                     posts={visiblePosts}

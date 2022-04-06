@@ -17,7 +17,7 @@ export default class PostListItem extends Component {
 
         return (
             <div className={classNames}>
-                <span
+                <span onClick={onToggleLike}
                     className='app-list-item-label' id={id}> {label}
                 </span>
                 <div className='d-flex justify-content-center align-items-center'>

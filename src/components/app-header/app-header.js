@@ -22,8 +22,8 @@ const Header = styled.div`
 
 const AppHeader = ({liked, allPosts}) => {
     return (
-        <Header colored as='a'>
-            <h1>John Weekend</h1>
+        <Header colored as='a' className='headerName'>
+            <h2>John Weekend</h2>
             <h2>{allPosts} twitts, liked: {liked}</h2>
         </Header>
     )

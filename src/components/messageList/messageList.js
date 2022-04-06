@@ -3,15 +3,15 @@ import MessageItem from '../messageItem';
 
 const messageListStyle = {
     height: '100%',
-    width: '800px',
+    // width: '800px',
     margin: 'auto',
 };
 
 const MessageList = () => {
     return (
-        <div style={messageListStyle}>
+        <div style={messageListStyle} className='message-wrapper'>
             <h1 className='message-title'>Messages Page</h1>
-            <ul> {new Array(5).fill('').map((_, index) => <MessageItem key={index} />)}  </ul>
+            <ul className='message-list'> {new Array(5).fill('').map((_, index) => <MessageItem key={index} />)}  </ul>
         </div>
     )
 }
